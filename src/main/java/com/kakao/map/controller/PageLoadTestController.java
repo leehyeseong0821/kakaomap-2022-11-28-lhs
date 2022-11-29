@@ -35,4 +35,6 @@ public class PageLoadTestController {
     public String test4(){
         return "test/test2";
     }
+
+
 }
