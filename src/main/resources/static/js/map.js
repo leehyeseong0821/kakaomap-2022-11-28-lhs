@@ -16,7 +16,7 @@
 // var zoomControl = new kakao.maps.ZoomControl();
 // map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-
+//싱글톤 사용 
 class MapService{
     static #instance = null;
     static getInstance(){
@@ -45,7 +45,7 @@ class MapService{
             const toggleButton = document.querySelector(".toggle-button");
             toggleButton.onclick = ()=>{
                 const aisde = document.querySelector("aside");
-                aisde.classList.toggle("invisible-aside");
+                aisde.classList.toggle("invisible-aside"); //toggle 숨겼다 보여줬다 클릭시마다.
                 if(aisde.classList.contains("invisible-aside")){
                     toggleButton.textContent = "▶";
                 }else{
@@ -60,7 +60,7 @@ class MapService{
             for(let i=0; i<mainMenuTab.length;i++){
                 mainMenuTab[i].onclick = () =>{
                     for(let j=0;j<mainMenuTab.length;j++){
-                        mainMenuTab[j].classList.remove("tab-selected");
+                        mainMenuTab[j].classList.remove("tab-selected"); //
                     }
                    mainMenuTab[i].classList.add("tab-selected");
 
